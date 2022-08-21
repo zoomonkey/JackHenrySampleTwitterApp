@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace WinFormsApp1
+namespace JHTwitterSampleApp
 {
     public class TwitterDataModel
     {

@@ -1,5 +1,5 @@
 ﻿
-namespace WinFormsApp1
+namespace JHTwitterSampleApp
 {
     partial class JHTwitterSampleApp
     {

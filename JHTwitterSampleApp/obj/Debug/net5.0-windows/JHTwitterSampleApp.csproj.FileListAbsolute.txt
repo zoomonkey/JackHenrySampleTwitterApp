@@ -26,8 +26,6 @@ C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTw
 C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTwitterSampleApp\bin\Debug\net5.0-windows\ref\JHTwitterSampleApp.dll
 C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTwitterSampleApp\bin\Debug\net5.0-windows\JHTwitterSampleApp.pdb
 C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTwitterSampleApp\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
-C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTwitterSampleApp\obj\Debug\net5.0-windows\JHTwitterSampleApp.csproj.AssemblyReference.cache
-C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTwitterSampleApp\obj\Debug\net5.0-windows\WinFormsApp1.JHTwitterSampleApp.resources
 C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTwitterSampleApp\obj\Debug\net5.0-windows\JHTwitterSampleApp.csproj.GenerateResource.cache
 C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTwitterSampleApp\obj\Debug\net5.0-windows\JHTwitterSampleApp.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTwitterSampleApp\obj\Debug\net5.0-windows\JHTwitterSampleApp.AssemblyInfoInputs.cache
@@ -40,3 +38,4 @@ C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTw
 C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTwitterSampleApp\obj\Debug\net5.0-windows\JHTwitterSampleApp.genruntimeconfig.cache
 C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTwitterSampleApp\bin\Debug\net5.0-windows\RestSharp.dll
 C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTwitterSampleApp\bin\Debug\net5.0-windows\JHTwitterSampleApp.dll.config
+C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTwitterSampleApp\obj\Debug\net5.0-windows\JHTwitterSampleApp.JHTwitterSampleApp.resources

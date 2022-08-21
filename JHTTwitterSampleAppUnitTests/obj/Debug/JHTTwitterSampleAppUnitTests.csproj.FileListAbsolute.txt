@@ -1,0 +1,13 @@
+C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTTwitterSampleAppUnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTTwitterSampleAppUnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTTwitterSampleAppUnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTTwitterSampleAppUnitTests\bin\Debug\JHTTwitterSampleAppUnitTests.dll
+C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTTwitterSampleAppUnitTests\bin\Debug\JHTTwitterSampleAppUnitTests.pdb
+C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTTwitterSampleAppUnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTTwitterSampleAppUnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTTwitterSampleAppUnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTTwitterSampleAppUnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTTwitterSampleAppUnitTests\obj\Debug\JHTTwitterSampleAppUnitTests.csproj.CoreCompileInputs.cache
+C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTTwitterSampleAppUnitTests\obj\Debug\JHTTwitterSampleAppUnitTests.csproj.CopyComplete
+C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTTwitterSampleAppUnitTests\obj\Debug\JHTTwitterSampleAppUnitTests.dll
+C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTTwitterSampleAppUnitTests\obj\Debug\JHTTwitterSampleAppUnitTests.pdb
