@@ -19,7 +19,6 @@ C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\WinFormsApp1\WinFormsAp
 C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\WinFormsApp1\WinFormsApp1\obj\Debug\net5.0-windows\JHTwitterSampleApp.pdb
 C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\WinFormsApp1\WinFormsApp1\obj\Debug\net5.0-windows\JHTwitterSampleApp.genruntimeconfig.cache
 C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTwitterSampleApp\bin\Debug\net5.0-windows\JHTwitterSampleApp.exe
-C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTwitterSampleApp\bin\Debug\net5.0-windows\JHTwitterSampleApp.dll.config
 C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTwitterSampleApp\bin\Debug\net5.0-windows\JHTwitterSampleApp.deps.json
 C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTwitterSampleApp\bin\Debug\net5.0-windows\JHTwitterSampleApp.runtimeconfig.json
 C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTwitterSampleApp\bin\Debug\net5.0-windows\JHTwitterSampleApp.runtimeconfig.dev.json
@@ -39,3 +38,5 @@ C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTw
 C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTwitterSampleApp\obj\Debug\net5.0-windows\ref\JHTwitterSampleApp.dll
 C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTwitterSampleApp\obj\Debug\net5.0-windows\JHTwitterSampleApp.pdb
 C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTwitterSampleApp\obj\Debug\net5.0-windows\JHTwitterSampleApp.genruntimeconfig.cache
+C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTwitterSampleApp\bin\Debug\net5.0-windows\RestSharp.dll
+C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTwitterSampleApp\bin\Debug\net5.0-windows\JHTwitterSampleApp.dll.config
