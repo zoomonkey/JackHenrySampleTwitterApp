@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net5.0-windows7.0": {
+    ".NETCoreApp,Version=v3.1": {
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
@@ -17,10 +17,10 @@
           "System.Text.Json": "5.0.0"
         },
         "compile": {
-          "lib/net5.0/RestSharp.dll": {}
+          "lib/netstandard2.0/RestSharp.dll": {}
         },
         "runtime": {
-          "lib/net5.0/RestSharp.dll": {}
+          "lib/netstandard2.0/RestSharp.dll": {}
         }
       },
       "System.Text.Json/5.0.0": {
@@ -104,7 +104,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net5.0-windows7.0": [
+    ".NETCoreApp,Version=v3.1": [
       "Newtonsoft.Json >= 13.0.1",
       "RestSharp >= 108.0.1"
     ]
@@ -130,15 +130,15 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net5.0-windows7.0"
+        "netcoreapp3.1"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net5.0-windows7.0": {
-          "targetAlias": "net5.0-windows",
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -149,8 +149,8 @@
       }
     },
     "frameworks": {
-      "net5.0-windows7.0": {
-        "targetAlias": "net5.0-windows",
+      "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Newtonsoft.Json": {
             "target": "Package",
@@ -174,7 +174,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.13, 5.0.13]"
+            "version": "[3.1.22, 3.1.22]"
           }
         ],
         "frameworkReferences": {
