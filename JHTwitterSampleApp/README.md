@@ -1,6 +1,10 @@
 # JackHenrySampleTwitterApp
+DESCRIPTION 
 This is a .Net Winforms app written in VS 2019.
 To run this, get the code, then modify the app.config to have your own Twitter Bearer Token it in.
+
+COMMENTARY
+
 
 Known issues & TODO's
 Need to store the Bearer key/token somewhere more secure like Vault, not in a config file
@@ -10,3 +14,11 @@ Notes, to get every field append to URL.
 //url += "?tweet.fields=attachments,author_id,context_annotations,conversation_id,created_at,entities,geo,id,in_reply_to_user_id,lang,non_public_metrics,";
 //url += "organic_metrics,possibly_sensitive,promoted_metrics,public_metrics,referenced_tweets,reply_settings,source,text,withheld&expansions=attachments.media_keys,attachments.poll_ids,author_id,entities.mentions.username,geo.place_id,in_reply_to_user_id,";
 //url += "referenced_tweets.id,referenced_tweets.id.author_id";
+
+
+
+RESOURCES:
+https://developer.twitter.com/en/docs/twitter-api/tweets/volume-streams/introduction
+https://developer.twitter.com/en/portal/petition/essential/basic-info
+https://developer.twitter.com/en/docs/twitter-api/tweets/volume-streams/api-reference/get-tweets-sample-stream
+https://www.youtube.com/watch?v=zQMNFEz5IVU

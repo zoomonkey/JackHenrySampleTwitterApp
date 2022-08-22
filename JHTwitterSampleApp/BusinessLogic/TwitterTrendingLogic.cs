@@ -14,23 +14,26 @@ namespace JHTwitterSampleApp.BusinessLogic
             _twitterDataModel = twitterDataModel;
             _log = logger;
         }
+        /// <summary>
+        /// Here we get all the hash tags from the given sample, group them together, then take the highest number count of that group giving us a 'trend'
+        /// </summary>
+        /// <returns>KeyValuePair<int, string></returns>
         public List<KeyValuePair<int, string>> GetTrendingHashTags()
         {
             try
             {
                 _log.Info("Call GetTrendingHashTags");
                 List<Hashtag> combinedHashTags = CombineAllHashTagsIntoOneList();
+                var query = from m in combinedHashTags
+                            group m.tag by m.tag into g
+                            select new { Name = g.Key, KeyCols = g.ToList() };
 
-                //var groupedCustomerList = _twitterDataModel
-                //.GroupBy(u => u.data.entities.hashtags)
-                //.Select(grp => grp.ToList())
-                //.ToList();
-
-
+                query = query.OrderByDescending(k => k.KeyCols.Count);
+            
                 var retval = new List<KeyValuePair<int, string>>();
 
-                // todo add real logic
-                for (int i = 0; i < 10; i++)
+                // todo add dynamic number of trending hashtags, do 5 for now
+                for (int i = 0; i < 6; i++)
                 {
                     if (combinedHashTags[i] == null)
                     {
@@ -50,7 +53,7 @@ namespace JHTwitterSampleApp.BusinessLogic
         /// <summary>
         /// Take a TwitterDataModel and return all of its hashtags combined into 1 list
         /// </summary>
-        /// <returns></returns>
+        /// <returns>List<Hashtag></returns>
         private List<Hashtag> CombineAllHashTagsIntoOneList()
         {
             try

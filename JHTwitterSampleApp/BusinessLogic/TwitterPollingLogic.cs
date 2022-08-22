@@ -39,6 +39,7 @@ namespace JHTwitterSampleApp.BusinessLogic
             try
             {
                 _log.Info("Call GetTwitterDataLive");
+                int recurringCounter = 0;
                 var httpRequest = (HttpWebRequest)WebRequest.Create(_url);
                 httpRequest.Accept = "application/json";
                 httpRequest.Headers["Authorization"] = "Bearer " + _twitterBearerToken;
@@ -54,27 +55,11 @@ namespace JHTwitterSampleApp.BusinessLogic
                         _twitterDataDynamic.Add(deserialized);
                         progressDynamic.Report(_twitterDataDynamic);
 
+                        recurringCounter++;
                         // at certain points, report on the trend discovered
-                        if (_twitterDataDynamic.Count > _sampleSizeForTrendingReport) // todo: make this variable 'settable'
+                        if (recurringCounter == _sampleSizeForTrendingReport)
                         {
-                            // get the last N records for a current sample
-                            _twitterDataDynamic.Reverse();
-                            List<TwitterDataModel> lastSample = _twitterDataDynamic.Take(sampleSizeForTrendingReport).ToList();
-                            _twitterDataDynamic.Reverse();
-
-                            // take a sample of the data and get a KeyValuePair of whats trending from this sample
-                            ITwitterTrendingLogic twitterTrendingLogic = new TwitterTrendingLogic(lastSample, _log);
-                            List<KeyValuePair<int, string>> trends = twitterTrendingLogic.GetTrendingHashTags();
-
-                            _twitterReportModel = new TwitterReportModel();
-                            foreach (KeyValuePair<int, string> item in trends)
-                            {
-                                if (item.Value != null)
-                                {
-                                    _twitterReportModel.trending += " " + item.Value;
-                                }
-                            }
-                            twitterReportModel.Report(_twitterReportModel);
+                            recurringCounter = ProcessTrendingReporting(twitterReportModel, sampleSizeForTrendingReport);
                         }
                     }
                 }
@@ -84,6 +69,36 @@ namespace JHTwitterSampleApp.BusinessLogic
                 _log.Error(ex.Message);
                 throw;
             }
+        }
+
+        /// <summary>
+        /// Handles the sampling of a certain number of tweets to determing what is trending
+        /// </summary>
+        /// <param name="twitterReportModel"></param>
+        /// <param name="sampleSizeForTrendingReport"></param>
+        /// <returns></returns>
+        private int ProcessTrendingReporting(IProgress<TwitterReportModel> twitterReportModel, int sampleSizeForTrendingReport)
+        {
+            int recurringCounter = 0;
+            // get the last N records for a current sample
+            _twitterDataDynamic.Reverse();
+            List<TwitterDataModel> lastSample = _twitterDataDynamic.Take(sampleSizeForTrendingReport).ToList();
+            _twitterDataDynamic.Reverse();
+
+            // take a sample of the data and get a KeyValuePair of whats trending from this sample
+            ITwitterTrendingLogic twitterTrendingLogic = new TwitterTrendingLogic(lastSample, _log);
+            List<KeyValuePair<int, string>> trends = twitterTrendingLogic.GetTrendingHashTags();
+
+            _twitterReportModel = new TwitterReportModel();
+            foreach (KeyValuePair<int, string> item in trends)
+            {
+                if (item.Value != null)
+                {
+                    _twitterReportModel.trending += " " + item.Value;
+                }
+            }
+            twitterReportModel.Report(_twitterReportModel);
+            return recurringCounter;
         }
     }
 }
