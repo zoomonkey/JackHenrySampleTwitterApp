@@ -70,7 +70,6 @@ namespace JHTwitterSampleApp.BusinessLogic
                 throw;
             }
         }
-
         /// <summary>
         /// Handles the sampling of a certain number of tweets to determing what is trending
         /// </summary>

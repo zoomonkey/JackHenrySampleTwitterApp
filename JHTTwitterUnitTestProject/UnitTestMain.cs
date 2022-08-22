@@ -36,7 +36,7 @@ namespace JHTTwitterUnitTestProject
         }
 
         /// <summary>
-        /// Test we can combine models into 1
+        /// Test we can combine models into 1 for simplicity sake
         /// </summary>
         [TestMethod]
         public void TestMainTwitterTrendingLogic()

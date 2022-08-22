@@ -43,7 +43,7 @@ namespace JHTwitterSampleApp
             // 
             this.lblMessage.AutoSize = true;
             this.lblMessage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblMessage.Location = new System.Drawing.Point(579, 0);
+            this.lblMessage.Location = new System.Drawing.Point(374, 0);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Size = new System.Drawing.Size(0, 32);
             this.lblMessage.TabIndex = 0;
@@ -65,25 +65,25 @@ namespace JHTwitterSampleApp
             // 
             this.tblLayout.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.tblLayout.ColumnCount = 2;
-            this.tblLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.39181F));
+            this.tblLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.60819F));
             this.tblLayout.Controls.Add(this.label1, 0, 1);
             this.tblLayout.Controls.Add(this.lblTrending, 0, 1);
             this.tblLayout.Controls.Add(this.lblMessage, 1, 0);
             this.tblLayout.Controls.Add(this.lblNumTweets, 0, 0);
-            this.tblLayout.Location = new System.Drawing.Point(24, 151);
+            this.tblLayout.Location = new System.Drawing.Point(24, 156);
             this.tblLayout.Name = "tblLayout";
             this.tblLayout.RowCount = 2;
-            this.tblLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblLayout.Size = new System.Drawing.Size(1153, 638);
+            this.tblLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.0094F));
+            this.tblLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 86.99059F));
+            this.tblLayout.Size = new System.Drawing.Size(855, 633);
             this.tblLayout.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(3, 319);
+            this.label1.Location = new System.Drawing.Point(3, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 32);
             this.label1.TabIndex = 3;
@@ -93,7 +93,7 @@ namespace JHTwitterSampleApp
             // 
             this.lblTrending.AutoSize = true;
             this.lblTrending.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTrending.Location = new System.Drawing.Point(579, 319);
+            this.lblTrending.Location = new System.Drawing.Point(374, 82);
             this.lblTrending.Name = "lblTrending";
             this.lblTrending.Size = new System.Drawing.Size(0, 32);
             this.lblTrending.TabIndex = 2;
@@ -112,7 +112,7 @@ namespace JHTwitterSampleApp
             // 
             this.btnStopPollingTwitter.BackColor = System.Drawing.Color.OrangeRed;
             this.btnStopPollingTwitter.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnStopPollingTwitter.Location = new System.Drawing.Point(1365, 12);
+            this.btnStopPollingTwitter.Location = new System.Drawing.Point(620, 33);
             this.btnStopPollingTwitter.Name = "btnStopPollingTwitter";
             this.btnStopPollingTwitter.Size = new System.Drawing.Size(259, 92);
             this.btnStopPollingTwitter.TabIndex = 3;
@@ -124,7 +124,7 @@ namespace JHTwitterSampleApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1627, 929);
+            this.ClientSize = new System.Drawing.Size(1404, 929);
             this.Controls.Add(this.btnStopPollingTwitter);
             this.Controls.Add(this.tblLayout);
             this.Controls.Add(this.btnStartPollingTwitter);
