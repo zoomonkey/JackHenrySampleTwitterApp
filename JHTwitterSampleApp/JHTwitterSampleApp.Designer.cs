@@ -42,9 +42,10 @@ namespace JHTwitterSampleApp
             // lblMessage
             // 
             this.lblMessage.AutoSize = true;
+            this.lblMessage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblMessage.Location = new System.Drawing.Point(579, 0);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(0, 25);
+            this.lblMessage.Size = new System.Drawing.Size(0, 32);
             this.lblMessage.TabIndex = 0;
             // 
             // btnStartPollingTwitter
@@ -75,14 +76,14 @@ namespace JHTwitterSampleApp
             this.tblLayout.RowCount = 2;
             this.tblLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tblLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblLayout.Size = new System.Drawing.Size(1153, 487);
+            this.tblLayout.Size = new System.Drawing.Size(1153, 638);
             this.tblLayout.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(3, 243);
+            this.label1.Location = new System.Drawing.Point(3, 319);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 32);
             this.label1.TabIndex = 3;
@@ -91,9 +92,10 @@ namespace JHTwitterSampleApp
             // lblTrending
             // 
             this.lblTrending.AutoSize = true;
-            this.lblTrending.Location = new System.Drawing.Point(579, 243);
+            this.lblTrending.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTrending.Location = new System.Drawing.Point(579, 319);
             this.lblTrending.Name = "lblTrending";
-            this.lblTrending.Size = new System.Drawing.Size(0, 25);
+            this.lblTrending.Size = new System.Drawing.Size(0, 32);
             this.lblTrending.TabIndex = 2;
             // 
             // lblNumTweets

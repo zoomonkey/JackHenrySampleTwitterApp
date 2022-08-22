@@ -28,15 +28,16 @@ namespace JHTwitterSampleApp.BusinessLogic
                             group m.tag by m.tag into g
                             select new { Name = g.Key, KeyCols = g.ToList() };
 
-                query = query.OrderByDescending(k => k.KeyCols.Count).Distinct();
+                query = query.OrderByDescending(k => k.KeyCols.Count);
 
                 var retval = new List<KeyValuePair<int, string>>();
 
-                // todo add dynamic number of trending hashtags, do 5 for now
-                for (int i = 0; i < 6; i++)
+                // todo add dynamic number of trending hashtags, do 10 for now
+                for (int i = 0; i < 10; i++)
                 {
-                    if (combinedHashTags[i] == null)
+                    if (string.IsNullOrEmpty(combinedHashTags[i].tag))
                     {
+                        i--;
                         continue;
                     }
                     retval.Add(new KeyValuePair<int, string>(i, combinedHashTags[i].tag));
