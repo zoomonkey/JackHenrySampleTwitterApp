@@ -5,7 +5,8 @@ namespace JHTwitterSampleApp.BusinessLogic
 {
     public interface ITwitterTrendingLogic
     {
-        public List<TwitterDataModel> _twitterDataModel { get; set; }
-        public List<KeyValuePair<int, string>> GetTrendingHashTags();
+        List<TwitterDataModel> _twitterDataModel { get; set; }
+        List<Hashtag> CombineAllHashTagsIntoOneList();
+        List<KeyValuePair<int, string>> GetTrendingHashTags();
     }
 }

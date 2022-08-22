@@ -90,11 +90,14 @@ namespace JHTwitterSampleApp.BusinessLogic
             List<KeyValuePair<int, string>> trends = twitterTrendingLogic.GetTrendingHashTags();
 
             _twitterReportModel = new TwitterReportModel();
+
+            int counter = 1;
             foreach (KeyValuePair<int, string> item in trends)
             {
                 if (item.Value != null)
                 {
-                    _twitterReportModel.trending += " " + item.Value;
+                    _twitterReportModel.trending += "#" + counter.ToString() + " " + item.Value + "\n";
+                    counter++;
                 }
             }
             twitterReportModel.Report(_twitterReportModel);

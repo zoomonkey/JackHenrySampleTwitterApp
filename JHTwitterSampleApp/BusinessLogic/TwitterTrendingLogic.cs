@@ -28,8 +28,8 @@ namespace JHTwitterSampleApp.BusinessLogic
                             group m.tag by m.tag into g
                             select new { Name = g.Key, KeyCols = g.ToList() };
 
-                query = query.OrderByDescending(k => k.KeyCols.Count);
-            
+                query = query.OrderByDescending(k => k.KeyCols.Count).Distinct();
+
                 var retval = new List<KeyValuePair<int, string>>();
 
                 // todo add dynamic number of trending hashtags, do 5 for now
@@ -54,11 +54,10 @@ namespace JHTwitterSampleApp.BusinessLogic
         /// Take a TwitterDataModel and return all of its hashtags combined into 1 list
         /// </summary>
         /// <returns>List<Hashtag></returns>
-        private List<Hashtag> CombineAllHashTagsIntoOneList()
+        public List<Hashtag> CombineAllHashTagsIntoOneList()
         {
             try
             {
-                _log.Info("Call CombineAllHashTagsIntoOneList");
                 // isolate the Entites list
                 var ents = new List<Entities>();
                 ents.AddRange(from TwitterDataModel e in _twitterDataModel

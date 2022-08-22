@@ -5,16 +5,17 @@ using Moq;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using log4net;
 
 namespace JHTTwitterUnitTestProject
 {
     [TestClass]
     public class UnitTestMain
     {
+        public ILog _log;
         /// <summary>
         /// Unit test JHTwitterSampleApp by mocking out key variables with local values
         /// NOTE: There is not much to test in this app, so this is just some samples of moq'ing out some values and asserting some Equals
-        /// I'm not sure you'd want to run a test on GetTwitterDataLive since it's Persistent.
         /// </summary>
         [TestMethod]
         public void TestMainTwitterPollingMethod()
@@ -32,6 +33,50 @@ namespace JHTTwitterUnitTestProject
 
             var test = mock.Object;
             test.GetTwitterDataLive(new Progress<List<TwitterDataModel>>(), new Progress<TwitterReportModel>(), 0);
+        }
+
+        /// <summary>
+        /// Test we can combine models into 1
+        /// </summary>
+        [TestMethod]
+        public void TestMainTwitterTrendingLogic()
+        {
+            log4net.Config.XmlConfigurator.Configure();
+
+            var tdmList = new List<TwitterDataModel>();
+            var tdm = new TwitterDataModel();
+            var tdm2 = new TwitterDataModel();
+
+            Data data = new Data();
+            data.entities = new Entities();
+            data.entities.hashtags = new List<Hashtag>() {
+                new Hashtag() { tag = "math" },
+                new Hashtag() { tag = "science" },
+                new Hashtag() { tag = "geology" },
+                new Hashtag() { tag = "math" }};
+            tdm.data = data;
+            tdmList.Add(tdm);
+
+            Data data1 = new Data();
+            data1.entities = new Entities();
+            data1.entities.hashtags = new List<Hashtag>() {
+                new Hashtag() { tag = "test1" },
+                new Hashtag() { tag = "test2" },
+                new Hashtag() { tag = "test3" },
+                new Hashtag() { tag = "test4" }};
+            tdm2.data = data1;
+            tdmList.Add(tdm2);
+
+            ITwitterTrendingLogic ttl = new TwitterTrendingLogic(tdmList, _log);
+
+            List<Hashtag> retList = ttl.CombineAllHashTagsIntoOneList();
+
+            Assert.AreEqual(retList.Count, 8);
+        }
+
+        public void TestGetTrendingHashTags()
+        { 
+            // TODO
         }
     }
 }
