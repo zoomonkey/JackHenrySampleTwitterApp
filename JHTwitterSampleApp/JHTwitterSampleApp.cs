@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JHTwitterSampleApp.BusinessLogic;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Threading.Tasks;
@@ -32,7 +33,8 @@ namespace JHTwitterSampleApp
             // this could be put in a DB or more dynamic, hard coded for now
             string url = ConfigurationManager.AppSettings["TwitterApiUrl"] + ConfigurationManager.AppSettings["TwitterApiUrlAppendFields"];
 
-            ITwitterPollingLogic twitter = new TwitterPollingLogic(url, ConfigurationManager.AppSettings["TwitterBearerToken"], int.Parse(ConfigurationManager.AppSettings["SampleSizeForTrendingReport"]));
+            ITwitterPollingLogic twitter = new TwitterPollingLogic(url, ConfigurationManager.AppSettings["TwitterApiUrlAppendFields"], ConfigurationManager.AppSettings["TwitterBearerToken"], 
+                int.Parse(ConfigurationManager.AppSettings["SampleSizeForTrendingReport"]));
 
             await Task.Run(() => twitter.GetTwitterDataLive(twitterDataDynamic, twitterReportModel, int.Parse(ConfigurationManager.AppSettings["SampleSizeForTrendingReport"])));
         }

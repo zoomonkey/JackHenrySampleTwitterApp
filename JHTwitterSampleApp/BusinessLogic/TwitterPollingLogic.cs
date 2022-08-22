@@ -1,10 +1,11 @@
-﻿using Newtonsoft.Json;
+﻿using JHTwitterSampleApp.BusinessLogic;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
 
-namespace JHTwitterSampleApp
+namespace JHTwitterSampleApp.BusinessLogic
 {
     public class TwitterPollingLogic : ITwitterPollingLogic
     {
@@ -16,7 +17,7 @@ namespace JHTwitterSampleApp
         /// <summary>
         /// Dependencies, url / security token 
         /// </summary>
-        public TwitterPollingLogic(string url, string twitterBearerToken, int sampleSizeForTrendingReport)
+        public TwitterPollingLogic(string url, string urlParams, string twitterBearerToken, int sampleSizeForTrendingReport)
         {
             _url = url;
             _twitterBearerToken = twitterBearerToken;
@@ -45,9 +46,20 @@ namespace JHTwitterSampleApp
                     _twitterDataDynamic.Add(deserialized);
                     progressDynamic.Report(_twitterDataDynamic);
 
+                    // at certain points, report on the trend discovered
                     if (_twitterDataDynamic.Count > _sampleSizeForTrendingReport) // todo: make this variable 'settable'
                     {
-                        _twitterReportModel.trending = "blah";
+                        // take a sample of the data and get a KeyValuePair of whats trending from this sample
+                        ITwitterTrendingLogic twitterTrendingLogic = new TwitterTrendingLogic(_twitterDataDynamic);
+                        List<KeyValuePair<int, string>> trends = twitterTrendingLogic.GetTrendingHashTags();
+
+                        foreach (KeyValuePair<int, string> item in trends)
+                        {
+                            if (item.Value != null)
+                            {
+                                _twitterReportModel.trending += " " + item.Value;
+                            }
+                        }
                         twitterReportModel.Report(_twitterReportModel);
                     }
                 }

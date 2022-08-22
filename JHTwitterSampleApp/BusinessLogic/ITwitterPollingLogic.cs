@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace JHTwitterSampleApp
+namespace JHTwitterSampleApp.BusinessLogic
 {
     public interface ITwitterPollingLogic
     {
