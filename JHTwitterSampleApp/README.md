@@ -2,40 +2,8 @@
 This is a .Net Winforms app written in VS 2019.
 To run this, get the code, then modify the app.config to have your own Twitter Bearer Token it in.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Known issues & TODO's
 Need to store the Bearer key/token somewhere more secure like Vault, not in a config file
-
-
-
-
 
 Notes, to get every field append to URL.
 // get every field
