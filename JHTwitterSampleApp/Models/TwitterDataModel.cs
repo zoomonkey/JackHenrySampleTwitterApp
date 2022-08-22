@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace JHTwitterSampleApp
+namespace JHTwitterSampleApp.Models
 {
-    public class TwitterDataModel
+   public class TwitterDataModel
     {
         public Data data { get; set; }
         public Includes includes { get; set; }
     }
-
-    public class Attachments
+   public class Attachments
     {
         public List<string> media_keys { get; set; }
     }
-
     public class Data
     {
         public Attachments attachments { get; set; }
@@ -31,7 +29,6 @@ namespace JHTwitterSampleApp
         public string source { get; set; }
         public string text { get; set; }
     }
-
     public class Entities
     {
         public List<Hashtag> hashtags { get; set; }
@@ -96,7 +93,6 @@ namespace JHTwitterSampleApp
         public string source { get; set; }
         public string text { get; set; }
     }
-
     public class Url
     {
         public int start { get; set; }
@@ -106,16 +102,10 @@ namespace JHTwitterSampleApp
         public string display_url { get; set; }
         public string media_key { get; set; }
     }
-
     public class User
     {
         public string id { get; set; }
         public string name { get; set; }
         public string username { get; set; }
     }
-
-
-
-
-
 }

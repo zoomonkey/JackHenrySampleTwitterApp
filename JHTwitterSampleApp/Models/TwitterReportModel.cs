@@ -1,4 +1,4 @@
-﻿namespace JHTwitterSampleApp
+﻿namespace JHTwitterSampleApp.Models
 {
     public class TwitterReportModel
     {

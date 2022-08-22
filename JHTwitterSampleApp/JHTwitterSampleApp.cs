@@ -1,4 +1,5 @@
 ﻿using JHTwitterSampleApp.BusinessLogic;
+using JHTwitterSampleApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Configuration;

@@ -1,4 +1,6 @@
-﻿namespace JHTwitterSampleApp
+﻿using JHTwitterSampleApp.Models;
+
+namespace JHTwitterSampleApp.DAL
 {
     public interface ITwitterDAO
     {

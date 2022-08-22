@@ -1,4 +1,5 @@
-using JHTwitterSampleApp;
+using JHTwitterSampleApp.BusinessLogic;
+using JHTwitterSampleApp.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System;
@@ -8,7 +9,7 @@ using System.Configuration;
 namespace JHTTwitterUnitTestProject
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTestMain
     {
         /// <summary>
         /// Unit test JHTwitterSampleApp by mocking out key variables with local values

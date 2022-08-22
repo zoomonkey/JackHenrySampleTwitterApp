@@ -1,7 +1,7 @@
-﻿using System;
-using System.Data;
+﻿using JHTwitterSampleApp.Models;
+using System;
 
-namespace JHTwitterSampleApp
+namespace JHTwitterSampleApp.DAL
 {
     public class TwitterDAO : ITwitterDAO
     {
