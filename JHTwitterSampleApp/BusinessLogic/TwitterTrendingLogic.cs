@@ -1,4 +1,5 @@
 ﻿using JHTwitterSampleApp.Models;
+using log4net;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -6,16 +7,18 @@ namespace JHTwitterSampleApp.BusinessLogic
 {
     public class TwitterTrendingLogic : ITwitterTrendingLogic
     {
+        public ILog _log;
         public List<TwitterDataModel> _twitterDataModel { get; set; }
-        public TwitterTrendingLogic(List<TwitterDataModel> twitterDataModel)
+        public TwitterTrendingLogic(List<TwitterDataModel> twitterDataModel, ILog logger)
         {
             _twitterDataModel = twitterDataModel;
+            _log = logger;
         }
-
         public List<KeyValuePair<int, string>> GetTrendingHashTags()
         {
             try
             {
+                _log.Info("Call GetTrendingHashTags");
                 List<Hashtag> combinedHashTags = CombineAllHashTagsIntoOneList();
 
                 //var groupedCustomerList = _twitterDataModel
@@ -40,11 +43,10 @@ namespace JHTwitterSampleApp.BusinessLogic
             }
             catch (System.Exception ex)
             {
-                string msg = ex.Message;
+                _log.Error(ex.Message);
                 throw;
             }
         }
-
         /// <summary>
         /// Take a TwitterDataModel and return all of its hashtags combined into 1 list
         /// </summary>
@@ -53,6 +55,7 @@ namespace JHTwitterSampleApp.BusinessLogic
         {
             try
             {
+                _log.Info("Call CombineAllHashTagsIntoOneList");
                 // isolate the Entites list
                 var ents = new List<Entities>();
                 ents.AddRange(from TwitterDataModel e in _twitterDataModel
@@ -71,7 +74,7 @@ namespace JHTwitterSampleApp.BusinessLogic
             }
             catch (System.Exception ex)
             {
-                string msg = ex.Message;
+                _log.Error(ex.Message);
                 throw;
             }
         }

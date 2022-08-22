@@ -106,3 +106,4 @@ C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTT
 C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTTwitterUnitTestProject\obj\Debug\netcoreapp3.1\JHTTwitterUnitTestProject.dll
 C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTTwitterUnitTestProject\obj\Debug\netcoreapp3.1\JHTTwitterUnitTestProject.pdb
 C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTTwitterUnitTestProject\obj\Debug\netcoreapp3.1\JHTTwitterUnitTestProject.genruntimeconfig.cache
+C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTTwitterUnitTestProject\bin\Debug\netcoreapp3.1\log4net.dll

@@ -1,6 +1,8 @@
 using System;
 using System.Windows.Forms;
 
+[assembly: log4net.Config.XmlConfigurator(ConfigFile = "log4net.config")]
+
 namespace JHTwitterSampleApp
 {
     static class Program

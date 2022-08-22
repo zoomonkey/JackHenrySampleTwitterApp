@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace JHTwitterSampleApp.Models
 {
-   public class TwitterDataModel
+    public class TwitterDataModel
     {
         public Data data { get; set; }
         public Includes includes { get; set; }
