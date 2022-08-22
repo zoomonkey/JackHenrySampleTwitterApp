@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net;
 
 namespace JHTwitterSampleApp.BusinessLogic
@@ -49,10 +50,16 @@ namespace JHTwitterSampleApp.BusinessLogic
                     // at certain points, report on the trend discovered
                     if (_twitterDataDynamic.Count > _sampleSizeForTrendingReport) // todo: make this variable 'settable'
                     {
+                        // get the last N records
+                        _twitterDataDynamic.Reverse();
+                        List<TwitterDataModel> lastSample = _twitterDataDynamic.Take(sampleSizeForTrendingReport).ToList();
+                        _twitterDataDynamic.Reverse();
+
                         // take a sample of the data and get a KeyValuePair of whats trending from this sample
-                        ITwitterTrendingLogic twitterTrendingLogic = new TwitterTrendingLogic(_twitterDataDynamic);
+                        ITwitterTrendingLogic twitterTrendingLogic = new TwitterTrendingLogic(lastSample);
                         List<KeyValuePair<int, string>> trends = twitterTrendingLogic.GetTrendingHashTags();
 
+                        _twitterReportModel = new TwitterReportModel();
                         foreach (KeyValuePair<int, string> item in trends)
                         {
                             if (item.Value != null)

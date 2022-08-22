@@ -18,3 +18,4 @@ C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTw
 C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTwitterSampleApp\obj\Debug\netcoreapp3.1\JHTwitterSampleApp.dll
 C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTwitterSampleApp\obj\Debug\netcoreapp3.1\JHTwitterSampleApp.pdb
 C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTwitterSampleApp\obj\Debug\netcoreapp3.1\JHTwitterSampleApp.genruntimeconfig.cache
+C:\Users\TDawg\Desktop\CodeChallenge\JHTwitterSampleApp1\JHTwitterSampleApp\JHTwitterSampleApp\obj\Debug\netcoreapp3.1\JHTwitterSampleApp.csproj.AssemblyReference.cache
