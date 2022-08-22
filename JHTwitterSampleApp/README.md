@@ -1,5 +1,5 @@
 # JackHenrySampleTwitterApp
-DESCRIPTION 
+DESCRIPTION  
 This is a .Net Winforms app written in VS 2019 .Net Core 3.1.
 To run this, get the code, then modify the app.config to have your own Live Twitter Bearer Token it in.  I put app.config in my .gitignore file so I wouldn't accidentally check in my Bearer token/key.
 
