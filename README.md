@@ -27,7 +27,8 @@ Need to store the Bearer key/token somewhere more secure like Vault, not in a co
 Needs more unit tests and integration tests.
 Needs more testing by other people (than me) in general.
 
-Notes, to get every field append to URL.
+NOTES
+to get every field append to URL.
 // get every field
 //url += "?tweet.fields=attachments,author_id,context_annotations,conversation_id,created_at,entities,geo,id,in_reply_to_user_id,lang,non_public_metrics,";
 //url += "organic_metrics,possibly_sensitive,promoted_metrics,public_metrics,referenced_tweets,reply_settings,source,text,withheld&expansions=attachments.media_keys,attachments.poll_ids,author_id,entities.mentions.username,geo.place_id,in_reply_to_user_id,";
