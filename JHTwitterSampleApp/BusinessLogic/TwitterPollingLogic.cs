@@ -9,6 +9,10 @@ using System.Net;
 
 namespace JHTwitterSampleApp.BusinessLogic
 {
+    /// <summary>
+    /// This class could, arguably, be broken down into more isolated classes for the argument for Single Responsibility pattern.
+    /// When time permits I will do that. 
+    /// </summary>
     public class TwitterPollingLogic : ITwitterPollingLogic
     {
         public int _sampleSizeForTrendingReport { get; set; }
