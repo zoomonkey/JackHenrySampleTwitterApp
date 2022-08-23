@@ -20,7 +20,7 @@ any of it is used) as well.
 I didn't know how to define what a 'trend' is, so I made the assumption that it is a snapshot in time, of a set of hashtags.  The  hashtags that are repeated indicate a 'trend'.
 That's my take on it.  The variable is just how often or how big is the sample size.  I used a sample of 500, or 1000 tweets for testing, but this thing could run for hours and probably get millions of Tweets I imagine.
 
-Known issues & TODO's
+KNOWN ISSUES & TODOS
 I am aware of the SOLID principles, their benefits, and tried to implement them. I want to revisit my Business Logic classes and maybe break them out into simpler classes.  
 
 Need to store the Bearer key/token somewhere more secure like Vault, not in a config file
