@@ -20,15 +20,15 @@ any of it is used) as well.
 I didn't know how to define what a 'trend' is, so I made the assumption that it is a snapshot in time, of a set of hashtags.  The  hashtags that are repeated indicate a 'trend'.
 That's my take on it.  The variable is just how often or how big is the sample size.  I used a sample of 500, or 1000 tweets for testing, but this thing could run for hours and probably get millions of Tweets I imagine.
 
-Known issues & TODO's
-I am aware of the SOLID principles and tried to implement them.  I also adhere to the KISS principleas much as I can.
-The class, TwitterPollingLogic has 2 methods.  This could possibly be broken out into another class,but the 2nd method was created so there wasn't too much code in 1 method.  Smaller more isolated methods make things easier to understand. 
+KNOWN ISSUES & TODOS
+I am aware of the SOLID principles, their benefits, and tried to implement them. I want to revisit my Business Logic classes and maybe break them out into simpler classes.  
 
 Need to store the Bearer key/token somewhere more secure like Vault, not in a config file
 Needs more unit tests and integration tests.
 Needs more testing by other people (than me) in general.
 
-Notes, to get every field append to URL.
+NOTES
+to get every field append to URL.
 // get every field
 //url += "?tweet.fields=attachments,author_id,context_annotations,conversation_id,created_at,entities,geo,id,in_reply_to_user_id,lang,non_public_metrics,";
 //url += "organic_metrics,possibly_sensitive,promoted_metrics,public_metrics,referenced_tweets,reply_settings,source,text,withheld&expansions=attachments.media_keys,attachments.poll_ids,author_id,entities.mentions.username,geo.place_id,in_reply_to_user_id,";
