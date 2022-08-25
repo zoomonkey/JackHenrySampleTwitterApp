@@ -67,9 +67,9 @@ namespace JHTTwitterUnitTestProject
             tdm2.data = data1;
             tdmList.Add(tdm2);
 
-            ITwitterTrendingLogic ttl = new TwitterTrendingLogic(tdmList, _log);
-
-            List<Hashtag> retList = ttl.CombineAllHashTagsIntoOneList();
+        
+            ICombineAllHashTagsLists combine = new CombineAllHashTagsLists(tdmList, null);
+            List<Hashtag> retList = combine.CombineAllHashTagsIntoOneList();
 
             Assert.AreEqual(retList.Count, 8);
         }

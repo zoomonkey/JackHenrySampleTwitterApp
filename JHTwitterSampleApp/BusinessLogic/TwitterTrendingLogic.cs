@@ -7,8 +7,8 @@ namespace JHTwitterSampleApp.BusinessLogic
 {
     public class TwitterTrendingLogic : ITwitterTrendingLogic
     {
-        public ILog _log;
-        public List<TwitterDataModel> _twitterDataModel { get; set; }
+        private ILog _log;
+        private List<TwitterDataModel> _twitterDataModel { get; set; }
         public TwitterTrendingLogic(List<TwitterDataModel> twitterDataModel, ILog logger)
         {
             _twitterDataModel = twitterDataModel;
@@ -23,7 +23,10 @@ namespace JHTwitterSampleApp.BusinessLogic
             try
             {
                 _log.Info("Call GetTrendingHashTags");
-                List<Hashtag> combinedHashTags = CombineAllHashTagsIntoOneList();
+
+                ICombineAllHashTagsLists combine = new CombineAllHashTagsLists(_twitterDataModel, _log);
+
+                List<Hashtag> combinedHashTags = combine.CombineAllHashTagsIntoOneList();
                 var query = from m in combinedHashTags
                             group m.tag by m.tag into g
                             select new { Name = g.Key, KeyCols = g.ToList() };
@@ -51,35 +54,6 @@ namespace JHTwitterSampleApp.BusinessLogic
                 throw;
             }
         }
-        /// <summary>
-        /// Take a TwitterDataModel and return all of its hashtags combined into 1 list
-        /// </summary>
-        /// <returns>List<Hashtag></returns>
-        public List<Hashtag> CombineAllHashTagsIntoOneList()
-        {
-            try
-            {
-                // isolate the Entites list
-                var ents = new List<Entities>();
-                ents.AddRange(from TwitterDataModel e in _twitterDataModel
-                              where e != null && e.data != null && e.data.entities != null && e.data.entities.hashtags != null
-                              select e.data.entities);
 
-                // get all the hashtags List of List 
-                var hashtags = new List<List<Hashtag>>();
-                hashtags.AddRange((from Entities e in ents
-                                   select e.hashtags));
-
-                // combine all the hashtags into 1 big list for simplicity sake
-                return (from list in hashtags
-                        from item in list
-                        select item).ToList();
-            }
-            catch (System.Exception ex)
-            {
-                _log.Error(ex.Message);
-                throw;
-            }
-        }
     }
 }

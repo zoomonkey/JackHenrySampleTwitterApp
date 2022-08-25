@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 namespace JHTwitterSampleApp.BusinessLogic
 {
-    public interface ITwitterTrendingLogic
+    public interface ICombineAllHashTagsLists
     {
-        List<KeyValuePair<int, string>> GetTrendingHashTags();
+        List<Hashtag> CombineAllHashTagsIntoOneList();
     }
 }
